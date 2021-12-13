@@ -52,6 +52,10 @@ def get_all_items():
     all_items = Note.query.all()
     return jsonify(notes_schema.dump(all_items))
 
+@app.route("/", methods=["GET"])
+def hellor():
+  
+    return "API Manuel"
 
 if __name__ == "__main__":
     app.run(debug=True)
