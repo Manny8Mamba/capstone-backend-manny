@@ -19,8 +19,8 @@ CORS(app)
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
-    body = db.Column(db.Float, nullable=False)
-    photo = db.Column(db.Float, nullable=False)
+    body = db.Column(db.String, nullable=False)
+    photo = db.Column(db.String, nullable=False)
 
     def __init__(self, title, body,photo):
         self.title = title
